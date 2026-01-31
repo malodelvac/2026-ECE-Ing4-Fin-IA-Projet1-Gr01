@@ -49,7 +49,7 @@ python main.py
 
 Le programme :
 1. Initialise le tournoi avec un nombre d’équipes donné
-2. Modélise le problème sous forme de CSP
+2. Modélise le problème sous forme de CP
 3. Résout le problème avec CP-SAT
 4. Affiche le calendrier et les statistiques
 5. Génère une visualisation graphique
@@ -63,7 +63,7 @@ Le nombre d’équipes est défini dans la fonction `main()` :
 scheduler = TournamentScheduler(n_teams=8)
 ```
 
-Si le nombre d’équipes est impair, une équipe fictive est ajoutée automatiquement afin de garantir la validité du calendrier.
+Si le nombre d’équipes est impair, le programme rend automatiquement le nombre de d'équipes pair.
 
 ---
 
@@ -74,7 +74,7 @@ La validité des solutions est assurée par :
 - Les statistiques affichées par équipe: domicile, extérieur, breaks
 - L’analyse visuelle du diagramme de Gantt
 
-Des tests ont été effectués pour différents nombres d’équipes (4 à 12), avec des solutions systématiquement valides.
+Des tests ont été effectués pour différents nombres d’équipes (4 à 12), avec des solutions systématiquement valides (nombre de break toujours egaux à n-2 avec n le nombre d'équipes).
 
 ---
 
