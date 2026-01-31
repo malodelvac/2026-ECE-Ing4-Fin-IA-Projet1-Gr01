@@ -1,9 +1,9 @@
 # Calendrier Sportif – Sports Tournament Scheduling
 
 ## Présentation du projet
-Ce projet a pour objectif de générer automatiquement le calendrier d’un championnat sportif de type round-robin aller-retour (chaque équipe rencontre toutes les autres deux fois, une à domicile et une à l’extérieur), tout en respectant un ensemble de contraintes réalistes issues de la recherche opérationnelle.
+Ce projet a pour objectif de générer automatiquement le calendrier d’un championnat sportif de type round-robin aller-retour chaque équipe rencontre toutes les autres deux fois, une à domicile et une à l’extérieur, tout en respectant un ensemble de contraintes réalistes issues de la recherche opérationnelle.
 
-Le problème est modélisé comme un problème de satisfaction de contraintes (CSP) et résolu à l’aide du solveur CP-SAT d’OR-Tools. L’optimisation porte principalement sur la minimisation des "breaks", c’est-à-dire les enchaînements de matchs consécutifs joués au même endroit: deux domiciles ou deux déplacements d’affilée.
+Le problème est modélisé comme un problème de satisfaction de contraintes CSP et résolu à l’aide du solveur CP-SAT d’OR-Tools. L’optimisation porte principalement sur la minimisation des "breaks", c’est-à-dire les enchaînements de matchs consécutifs joués au même endroit: deux domiciles ou deux déplacements d’affilée.
 
 Ce projet s’inspire directement de travaux académiques reconnus en ordonnancement sportif (Régin, Schaerf) et des compétitions internationales de sports scheduling.
 
@@ -21,7 +21,7 @@ Ce projet s’inspire directement de travaux académiques reconnus en ordonnance
   - Calendrier par journée
   - Vue par équipe
   - Statistiques domicile / extérieur et breaks
-- Visualisation graphique du calendrier sous forme de **diagramme de Gantt**
+- Visualisation graphique du calendrier sous forme de diagramme de Gantt
 
 ---
 
@@ -76,7 +76,7 @@ Le nombre d’équipes doit être pair, une équipe fictive est ajoutée automat
 ## Tests et validation
 
 Les tests sont réalisés de manière fonctionnelle via :
-- La vérification automatique des contraintes (imposées par le solveur CP-SAT)
+- La vérification automatique des contraintes imposées par le solveur CP-SAT
 - L’affichage des statistiques finales :
   - Nombre de matchs domicile / extérieur par équipe
   - Nombre total de breaks
